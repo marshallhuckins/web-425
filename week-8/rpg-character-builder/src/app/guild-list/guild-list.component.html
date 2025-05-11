@@ -1,0 +1,9 @@
+<div *ngIf="guilds.length; else noGuilds">
+  <ul>
+    <li *ngFor="let guild of guilds">{{ guild.name }}</li>
+  </ul>
+</div>
+
+<ng-template #noGuilds>
+  <p>No guilds have been created yet.</p>
+</ng-template>

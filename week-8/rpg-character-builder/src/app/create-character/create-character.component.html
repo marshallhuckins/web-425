@@ -1,0 +1,43 @@
+<h2 class="text-xl font-semibold mb-4">Create Character</h2>
+
+<form (ngSubmit)="addCharacter()" #characterForm="ngForm" class="space-y-4">
+  <div>
+    <label for="name" class="block font-medium">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="character.name" required class="border p-2 rounded w-full" />
+  </div>
+
+  <div>
+    <label for="gender" class="block font-medium">Gender:</label>
+    <select id="gender" name="gender" [(ngModel)]="character.gender" required class="border p-2 rounded w-full">
+      <option value="">-- Select Gender --</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="class" class="block font-medium">Class:</label>
+    <input type="text" id="class" name="class" [(ngModel)]="character.class" required class="border p-2 rounded w-full" />
+  </div>
+
+  <div>
+    <label for="faction" class="block font-medium">Faction:</label>
+    <input type="text" id="faction" name="faction" [(ngModel)]="character.faction" required class="border p-2 rounded w-full" />
+  </div>
+
+  <div>
+    <label for="startingLocation" class="block font-medium">Starting Location:</label>
+    <input type="text" id="startingLocation" name="startingLocation" [(ngModel)]="character.startingLocation" required class="border p-2 rounded w-full" />
+  </div>
+
+  <div>
+    <label for="funFact" class="block font-medium">Fun Fact:</label>
+    <textarea id="funFact" name="funFact" [(ngModel)]="character.funFact" rows="3" required class="border p-2 rounded w-full"></textarea>
+  </div>
+
+  <div class="flex space-x-4">
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Add Character</button>
+    <button type="button" (click)="resetForm()" class="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400">Reset</button>
+  </div>
+</form>

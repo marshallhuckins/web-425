@@ -28,7 +28,7 @@ import { Character } from '../models/character.model';
 
       <div>
         <label for="class">Class:</label>
-        <select id="class" name="class" required [(ngModel)]="characterClass">
+        <select id="class" name="class" required [(ngModel)]="class">
           <option value="" disabled selected>Select class</option>
           <option value="Warrior">Warrior</option>
           <option value="Mage">Mage</option>
@@ -87,7 +87,7 @@ import { Character } from '../models/character.model';
 export class CreateCharacterComponent {
   name: string = '';
   gender: 'Male' | 'Female' | 'Other' = 'Male';
-  characterClass: 'Warrior' | 'Mage' | 'Rogue' = 'Warrior';
+  class: 'Warrior' | 'Mage' | 'Rogue' = 'Warrior';
   faction: string = '';
   startingLocation: string = '';
   funFact: string = '';
@@ -104,7 +104,7 @@ export class CreateCharacterComponent {
       id: this.generateCharacterId(),
       name: this.name,
       gender: this.gender,
-      characterClass: this.characterClass,
+      class: this.class,
       faction: this.faction,
       startingLocation: this.startingLocation,
       funFact: this.funFact
@@ -118,7 +118,7 @@ export class CreateCharacterComponent {
   resetForm(): void {
     this.name = '';
     this.gender = 'Male';
-    this.characterClass = 'Warrior';
+    this.class = 'Warrior';
     this.faction = '';
     this.startingLocation = '';
     this.funFact = '';

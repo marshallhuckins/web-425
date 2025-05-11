@@ -1,0 +1,9 @@
+<div *ngIf="characters.length; else noCharacters">
+  <ul>
+    <li *ngFor="let character of characters">{{ character.name }}</li>
+  </ul>
+</div>
+
+<ng-template #noCharacters>
+  <p>No characters have been created yet.</p>
+</ng-template>

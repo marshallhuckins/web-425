@@ -26,7 +26,7 @@ describe('CreateCharacterComponent', () => {
   it('should add a character with correct customization', () => {
     component.name = 'Aelar';
     component.gender = 'Other';
-    component.characterClass = 'Mage';
+    component.class = 'Mage';
     component.faction = 'Moonrise';
     component.startingLocation = 'Elven Grove';
     component.funFact = 'Loves stargazing';
@@ -37,7 +37,7 @@ describe('CreateCharacterComponent', () => {
     const addedChar = component.characters[0];
     expect(addedChar.name).toBe('Aelar');
     expect(addedChar.gender).toBe('Other');
-    expect(addedChar.characterClass).toBe('Mage');
+    expect(addedChar.class).toBe('Mage');
     expect(addedChar.faction).toBe('Moonrise');
     expect(addedChar.startingLocation).toBe('Elven Grove');
     expect(addedChar.funFact).toBe('Loves stargazing');
@@ -48,7 +48,7 @@ describe('CreateCharacterComponent', () => {
   it('should reset all form fields to their default values after resetForm is called', () => {
     component.name = 'TestName';
     component.gender = 'Female';
-    component.characterClass = 'Warrior';
+    component.class = 'Warrior';
     component.faction = 'Stoneguard';
     component.startingLocation = 'Northern Keep';
     component.funFact = 'Drinks 3 cups of tea daily';
@@ -57,7 +57,7 @@ describe('CreateCharacterComponent', () => {
 
     expect(component.name).toBe('');
     expect(component.gender).toBe('Male');
-    expect(component.characterClass).toBe('Warrior');
+    expect(component.class).toBe('Warrior');
     expect(component.faction).toBe('');
     expect(component.startingLocation).toBe('');
     expect(component.funFact).toBe('');
@@ -68,7 +68,7 @@ describe('CreateCharacterComponent', () => {
 
     component.name = 'TestHero';
     component.gender = 'Male';
-    component.characterClass = 'Rogue';
+    component.class = 'Rogue';
     component.faction = 'Shadowveil';
     component.startingLocation = 'Undercity';
     component.funFact = 'Expert lockpicker';
@@ -80,7 +80,7 @@ describe('CreateCharacterComponent', () => {
     const emittedCharacter = (component.characterCreated.emit as jasmine.Spy).calls.mostRecent().args[0];
     expect(emittedCharacter.name).toBe('TestHero');
     expect(emittedCharacter.gender).toBe('Male');
-    expect(emittedCharacter.characterClass).toBe('Rogue');
+    expect(emittedCharacter.class).toBe('Rogue');
     expect(emittedCharacter.faction).toBe('Shadowveil');
     expect(emittedCharacter.startingLocation).toBe('Undercity');
     expect(emittedCharacter.funFact).toBe('Expert lockpicker');

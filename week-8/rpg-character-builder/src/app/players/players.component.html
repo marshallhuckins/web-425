@@ -1,0 +1,11 @@
+<h2 class="text-xl font-semibold mb-4">Players</h2>
+<ul>
+  <li *ngFor="let player of players" class="mb-2 p-4 rounded shadow border">
+    <p><strong>Name:</strong> {{ player.name }}</p>
+    <p><strong>Gender:</strong> {{ player.gender }}</p>
+    <p><strong>Class:</strong> {{ player.class }}</p>
+    <p><strong>Faction:</strong> {{ player.faction }}</p>
+    <p><strong>Starting Location:</strong> {{ player.startingLocation }}</p>
+    <p><strong>Fun Fact:</strong> {{ player.funFact }}</p>
+  </li>
+</ul>

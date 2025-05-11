@@ -1,0 +1,17 @@
+<div class="character-faction-container">
+  <h2>Character Factions</h2>
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <ul *ngIf="characterFactions.length > 0; else noFactions">
+    <li *ngFor="let faction of characterFactions">
+      {{ faction }}
+    </li>
+  </ul>
+
+  <ng-template #noFactions>
+    <p>No factions found.</p>
+  </ng-template>
+</div>
